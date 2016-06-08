@@ -11,7 +11,7 @@
 
  ## What you'll learn
 
- In these _Playgrounds_, you will learn how to use _variables_. _Variables_ are a way to store and refer to values by a readable. _Variables_ can hold all sorts of values: a number, a word, or even complex collections of other variables!
+ In these _Playgrounds_, you will learn how to use _variables_. _Variables_ are a way to store and refer to values by a readable name. _Variables_ can hold all sorts of values: a number, a word, or even complex collections of other variables!
 
  - note: Press next to get started.
 

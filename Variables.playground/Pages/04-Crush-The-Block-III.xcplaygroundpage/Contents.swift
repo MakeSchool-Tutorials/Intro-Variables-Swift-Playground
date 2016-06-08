@@ -7,7 +7,7 @@ srandom(UInt32(time(nil)))
 
  This is _Crush the Block III_, the third and final installment in the saga. This microgame is exactly the same as the previous one, except now a gust of wind blows against your block!
 
- The way wind works in this microgame is the force of the wind gets subtracted to whatever value you set for force, so if the wind blows with a value of `4` and you set `force = 6`, the block will have a total force of `2` (because `6 - 4 = 2`).
+ The way wind works in this microgame is the force of the wind gets subtracted whatever value you set for force, so if the wind blows with a value of `4` and you set `force = 6`, the block will have a total force of `2` (because `6 - 4 = 2`).
 
  If you knew the wind force, you could just adjust your number from before accordingly. So, if you knew the wind force was `4`, and you wanted your block to experience a total force of `6`, rather than setting the `force = 6`, you would set `force = 10`, because `10 - 4` equals `6`.
 
@@ -19,7 +19,7 @@ let windForce: Int = random() % 25 + 50
 
 /*:
 
- Unfortunately for us, this isn’t something simple like `let windSpeed: Int = 4`, instead, we have `let windSpeed = random() % 100`. You'll be able to understand this soon enough but for now, just trust us that windForce is a random number between `0` and `99` inclusive.
+ Unfortunately for us, this isn’t something simple like `let windForce: Int = 4`, instead, we have `let windForce = random() % 100`. You'll be able to understand this soon enough but for now, just trust us that windForce is a random number between `0` and `24` inclusive.
 
  `windForce` will change every time the game is run (at least every time you change the code) so you cannot count on it being any specific value.
 
@@ -27,7 +27,7 @@ let windForce: Int = random() % 25 + 50
 
  ![](imgs/random_number.png)
 
- In the above screenshot you can see the windForce with a value of `49` (look at the far right side). This changes every time the playground runs (every time the code changes). You can also manually re-run a playground by toggling the stop/play buttons at the bottom:
+ In the above screenshot you can see the windForce with a value of `1` (look at the far right side). This changes every time the playground runs (every time the code changes). You can also manually re-run a playground by toggling the stop/play buttons at the bottom:
 
  ![](imgs/toggle_run.gif)
 

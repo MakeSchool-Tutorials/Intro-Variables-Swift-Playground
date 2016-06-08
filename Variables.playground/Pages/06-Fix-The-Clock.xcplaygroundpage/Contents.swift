@@ -36,7 +36,7 @@ let doubleDivisionExample: Double = 15 / 4
 
  `Int` is a whole number. When you divide an `Int` by an `Int` and ask for an `Int` result you lose "precision". Look at the example above.
 
- `integerDivisionExample` contains the result of 15 divided by 4. It stores the result as an `Int`. `doubleDivionExample` contains the result of the _same_ expression but stores it as a `Double`. `doubleDivisionExample` shows us an accurate result while `integerDivisionExample` just throws away the extra data after the decimal point (`0.75`).
+ `integerDivisionExample` contains the result of 15 divided by 4. It stores the result as an `Int`. `doubleDivisionExample` contains the result of the _same_ expression but stores it as a `Double`. `doubleDivisionExample` shows us an accurate result while `integerDivisionExample` just throws away the extra data after the decimal point (`0.75`).
 
  ![](imgs/division_example.png)
 

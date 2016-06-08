@@ -14,7 +14,7 @@ var distanceFromLeft: Int = 50
 
  ## First line of code
 
- See that line above? This creates a new _"variable"_ called `distanceFromLeft` and stores the value `50` in it. We'll disect the syntax of this line after we complete the challenge.
+ See that line above? This creates a new _variable_ called `distanceFromLeft` and stores the value `50` in it. We'll disect the syntax of this line after we complete the challenge.
 
  Based on the visualization (on the right), the center of the falling block is `50` units from the left side of the screen. It starts to fall as soon as the microgame starts.
 
@@ -51,7 +51,7 @@ var distanceFromLeft: Int = 50
 
  ## Crushing the block!
 
- Once you’re convinced, try placing the top block above the one sitting on the ground. 270 units ought to be just right!
+ Once you’re convinced, try placing the top block above the one sitting on the ground. 260 units ought to be just right!
 
  - callout(Try it out): Enter the following code below `distanceFromLeft = 270`
 
@@ -88,11 +88,15 @@ var distanceFromLeft: Int = 50
 
  This exercise only used the `Int` type (whole numbers). How did the computer know that we wanted the variable `distanceFromLeft` to be an `Int` variable?
 
- - important: We created `distanceFromLeft` with the line `var distanceFromLeft: Int = 50`. We already know `var` is the keyword for creating a variable. We know `distanceFromLeft` is the name of the variable. We also know that `50` was the intial value. Using this knowledge we can infer that the syntax to create variables is `var variableName: variableType = value`. `var`, the `:` and the `=` are always there. _variableName_, _variableType_, and _value_ are what change.
+ - important: We created `distanceFromLeft` with the line
+ 
+      `var distanceFromLeft: Int = 50`
+ 
+    We already know `var` is the keyword for creating a variable. We know `distanceFromLeft` is the name of the variable. We also know that `50` was the intial value. Using this knowledge we can infer that the syntax to create variables is `var variableName: variableType = value`. `var`, the `:` and the `=` are always there. _variableName_, _variableType_, and _value_ are what change.
 
  ## Naming a variable
 
- The cool thing about variables is you can nickname them in what looks like regular language. This makes it easy to remember what they mean. If you name your variables well, other people can figure it out by looking at it.
+ The cool thing about variables is you can nickname them in what looks like regular language. This makes it easy to remember what they mean. If you name your variables well, other people can figure it out by looking at them.
 
  Our variable `distanceFromLeft`, for example, is a number of units from the left, like the name implies. If we had wanted to be even more specific, we could have named it something like `distanceFromTheLeftSideOfTheScreenThatTheCenterOfTheTopBlockWillAppear`, but... we wanted something a bit shorter that still got the basic idea across.
 
@@ -111,9 +115,9 @@ var distanceFromLeft: Int = 50
 
  ## Why was setting this variable special?
 
- Why did it make the game do stuff? Changing this makes the game do stuff because the code code below uses for the value of distanceFromLeft to position the top block when the scene loads. It’s not important to understand this code now, but you can see it at the bottom of this Playground page.
+ Why did it make the game do stuff? Changing this makes the game do stuff because the code below uses the value of distanceFromLeft to position the top block when the scene loads. It’s not important to understand this code now, but you can see it at the bottom of this Playground page.
 
- See how the code has the variable `distanceFromLeft` in there?  That’s the same variable we set a few lines earlier. What do you think will happen if you set the variable after line the line starting with `let results`?
+ See how the code has the variable `distanceFromLeft` in there?  That’s the same variable we set a few lines earlier. What do you think will happen if you set the variable after the line starting with `let results`?
 
  - callout(Moving on): Whew, that was a lot of information. Let's continue through the challenges and try applying these concepts in a few other ways. Press next below!
 

@@ -3,7 +3,7 @@
 
  # Save the Lemmings
 
- This microgame is about saving the lemmings (in particular, just one). We admittedly had a bit too much fun making this, but the gist is this: a Lemming will walk up to the sign in the center of the screen, and, unless the sign reads `Danger` that lemming will jump off the cliff, to certain doom.
+ This microgame is about saving the lemmings (in particular, just one). We admittedly had a bit too much fun making this, but the gist is this: a lemming will walk up to the sign in the center of the screen, and, unless the sign reads `Danger` that lemming will jump off the cliff, to certain doom.
 
  Your job is to make the sign say `Danger`, so that no lemmings perish.
 
@@ -15,7 +15,9 @@ var signText: String = "This is not a sign."
 
 /*:
 
- If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign. Try updating the `signText` variable so that the sign show's your name. Remember to use double quotes (`"`) around your new _String_!
+ If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign. 
+ 
+ - callout(Try it out!): Try updating the `signText` variable so that the sign show's your name. Remember to use double quotes (`"`) around your new _String_!
 
 */
 
@@ -51,7 +53,7 @@ var signText: String = "This is not a sign."
 
  This is another compiler error. It happened because the compiler has noticed you’re trying to change the type of this variable, which, in Swift, is not allowed.  This variable was defined as a String when it was created, not as an Int.
 
- - challenge: With what you know now, make the sign say "Danger" and watch the lemming survive!
+ - challenge: With what you know now, make the sign say "Danger" and watch the lemmings survive!
 
 */
 
