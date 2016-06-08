@@ -5,7 +5,7 @@
 
  We'll be playing a microgame called _Crush the Block_. The goal is to change the position of the green block so it will fall onto the orange block.
 
- Like we said earlier, _Playgrounds_ allow for both code and instructions in the same file. This means we can give explain everything as you code your way through the challenges. Prepare to see your first line of code!
+ Like we said earlier, _Playgrounds_ allow for both code and instructions in the same file. This means we can explain everything as you code your way through the challenges. Prepare to see your first line of code!
 */
 
 var distanceFromLeft: Int = 50
