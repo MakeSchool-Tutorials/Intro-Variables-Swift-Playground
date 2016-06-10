@@ -7,7 +7,7 @@
 
  This time, in order to crush the block, you need to change the variable called force to make the block on the left jump off the platform and hit block on the right. `force` is the amount of rightward force applied to the block. You'll need to find the right value -- too high and you'll overshoot, too low and you won't make it across the gap!
 
- Start off by changing `0` to `10`. Keep trying until you get it just right.
+ Start off by changing `0` to `10`. You might not see any changes until you get to higher values. Keep trying until you get it just right.
 
 */
 

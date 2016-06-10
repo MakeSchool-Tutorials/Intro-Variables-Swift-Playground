@@ -3,9 +3,9 @@
 
  # Crush the Block
 
- We'll be playing a microgame called _Crush the Block_. The goal is to change the position of the green block so it will fall onto the orange block.
+ We'll be playing a microgame called _Crush the Block_. The goal is to change the position of the yellow block so it will fall onto the white block.
 
- Like we said earlier, _Playgrounds_ allow for both code and instructions in the same file. This means we can give explain everything as you code your way through the challenges. Prepare to see your first line of code!
+ Like we said earlier, _Playgrounds_ allow for both code and instructions in the same file. This means we can explain everything as you code your way through the challenges. Prepare to see your first line of code!
 */
 
 var distanceFromLeft: Int = 50
@@ -14,7 +14,7 @@ var distanceFromLeft: Int = 50
 
  ## First line of code
 
- See that line above? This creates a new _variable_ called `distanceFromLeft` and stores the value `50` in it. We'll disect the syntax of this line after we complete the challenge.
+ See that line above? This creates a new _variable_ called `distanceFromLeft` and stores the value `50` in it. We'll dissect the syntax of this line after we complete the challenge.
 
  Based on the visualization (on the right), the center of the falling block is `50` units from the left side of the screen. It starts to fall as soon as the microgame starts.
 
@@ -53,7 +53,7 @@ var distanceFromLeft: Int = 50
 
  Once you’re convinced, try placing the top block above the one sitting on the ground. 260 units ought to be just right!
 
- - callout(Try it out): Enter the following code below `distanceFromLeft = 270`
+ - callout(Try it out): Enter the following code below `distanceFromLeft = 260`
 
 */
 

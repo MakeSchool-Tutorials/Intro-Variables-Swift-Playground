@@ -42,7 +42,7 @@ let doubleDivisionExample: Double = 15 / 4
 
  ## Setting the time
 
- The way you’re going to control the clock hands is by setting the variables `rotationSecond`, `rotationMinute`, and `rotationHour`, which control the rotation of the clock hands.
+ The way you’re going to control the clock hands is by setting the variables `secondRotation`, `minuteRotation`, and `hourRotation`, which control the rotation of the clock hands.
 
  To get some intuition for this, set one of their values to a number between 0 and 360. This number corresponds to the number of degrees the hand is rotated from its start position (pointing straight up).
 
