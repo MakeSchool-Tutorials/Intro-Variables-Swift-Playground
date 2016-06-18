@@ -1,8 +1,7 @@
 import Foundation
 srandom(UInt32(time(nil)))
-//: [Previous](@previous)
 /*:
-
+ ![Make School Banner](./swift_banner.png)
  # Fix the Clock
 
  In _Fix the Clock_, your job is to make the three hands of the analogue clock match the time on the digital one! Every frame, your code will read new values for the time in hours, minutes, and seconds.

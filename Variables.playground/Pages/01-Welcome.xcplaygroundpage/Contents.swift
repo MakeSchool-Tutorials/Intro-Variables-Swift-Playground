@@ -1,5 +1,5 @@
 /*:
-
+ ![Make School Banner](./swift_banner.png)
  # Very Able
  ## An Introduction to Variables
 

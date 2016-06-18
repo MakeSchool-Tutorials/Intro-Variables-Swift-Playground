@@ -1,6 +1,5 @@
-//: [Previous](@previous)
 /*:
-
+ ![Make School Banner](./swift_banner.png)
  # Save the Lemmings
 
  This microgame is about saving the lemmings (in particular, just one). We admittedly had a bit too much fun making this, but the gist is this: a lemming will walk up to the sign in the center of the screen, and, unless the sign reads `Danger` that lemming will jump off the cliff, to certain doom.
@@ -110,7 +109,7 @@ var signText: String = "This is not a sign."
  Let’s go on to the next challenge!
 
 */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 
 
 
@@ -152,4 +151,4 @@ var signText: String = "This is not a sign."
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = SaveTheLemmingsScene.setup(stringForSign: signText)
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

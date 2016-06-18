@@ -1,6 +1,5 @@
-//: [Previous](@previous)
 /*:
-
+ ![Make School Banner](./swift_banner.png)
  # Crush the Block II
 
  Let's get started with the next challenge! This playground controls the _Crush the Block II_, the exciting sequel to the Crush the Block microgame.
@@ -55,7 +54,7 @@
 
  - important: the Playground cannot run while there are errors (any red marks). Make sure to remove `force = 0` from above since it is not needed.
 */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 
 
 
@@ -97,4 +96,4 @@
 //:This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = CrushTheBlockIIScene.setup(force)
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

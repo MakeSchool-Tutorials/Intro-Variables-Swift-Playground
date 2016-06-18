@@ -1,8 +1,7 @@
 import Foundation
 srandom(UInt32(time(nil)))
-//: [Previous](@previous)
 /*:
- 
+ ![Make School Banner](./swift_banner.png)
  # Crush the Block III
 
  This is _Crush the Block III_, the third and final installment in the saga. This microgame is exactly the same as the previous one, except now a gust of wind blows against your block!
@@ -54,7 +53,7 @@ let windForce: Int = random() % 25 + 50
  - note: The plus sign, by the way, between 80 and windSpeed is one of many operators you can use to do math between number variables.  Others include + for addition, / for division, and * for multiplication.  You can also use parentheses to determine order of operations, but be aware that, unlike in normal math, something like `(x) y` does not mean (x) times y.  You need to explicitly put a multiplication operator between any values you want to multiply, so `(x) * y` or even just `x * y` would be valid.
 
 */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 
 
 
@@ -96,4 +95,4 @@ let windForce: Int = random() % 25 + 50
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = CrushTheBlockIIIScene.setup(forceToApply: force, windSpeed: windForce)
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current

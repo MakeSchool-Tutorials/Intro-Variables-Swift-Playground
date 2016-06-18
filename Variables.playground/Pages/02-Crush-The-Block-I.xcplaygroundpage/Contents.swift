@@ -1,6 +1,5 @@
-//: [Previous](@previous)
 /*:
-
+ ![Make School Banner](./swift_banner.png)
  # Crush the Block
 
  We'll be playing a microgame called _Crush the Block_. The goal is to change the position of the yellow block so it will fall onto the white block.
@@ -122,7 +121,7 @@ var distanceFromLeft: Int = 50
  - callout(Moving on): Whew, that was a lot of information. Let's continue through the challenges and try applying these concepts in a few other ways. Press next below!
 
 */
-//: [Next](@next)
+//: [Previous](@previous) | [Next](@next)
 
 
 
@@ -165,4 +164,4 @@ var distanceFromLeft: Int = 50
 import XCPlayground
 import Foundation
 let results = CrushTheBlockIScene.setup(distanceFromLeft)
-XCPlaygroundPage.currentPage.liveView = results
+XCPlaygroundPage.current
