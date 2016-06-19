@@ -102,6 +102,7 @@ let minuteRotation = 0
  That's all we have for this set of challenges. The next set of exercises will cover _functions_ or "blocks of code". This will allow you to reuse code you write and use code that others wrote! We'll also demystify how we randomized numbers throughout these challenges :)
 
 */
+//: [Previous](@previous)
 
 
 
