@@ -14,8 +14,8 @@ var signText: String = "This is not a sign."
 
 /*:
 
- If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign. 
- 
+ If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign.
+
  - callout(Try it out!): Try updating the `signText` variable so that the sign show's your name. Remember to use double quotes (`"`) around your new _String_!
 
 */
@@ -43,7 +43,7 @@ var signText: String = "This is not a sign."
  Now try taking out the quotes on the above line and see what happens...
 
  ![](imgs/string_int_error.png)
- 
+
  - note: Make sure to put the quotes back in!
 
  ## Type errors
@@ -151,4 +151,4 @@ var signText: String = "This is not a sign."
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = SaveTheLemmingsScene.setup(stringForSign: signText)
-XCPlaygroundPage.current
+XCPlaygroundPage.currentPage.liveView = results

@@ -88,9 +88,9 @@ var distanceFromLeft: Int = 50
  This exercise only used the `Int` type (whole numbers). How did the computer know that we wanted the variable `distanceFromLeft` to be an `Int` variable?
 
  - important: We created `distanceFromLeft` with the line
- 
+
       `var distanceFromLeft: Int = 50`
- 
+
     We already know `var` is the keyword for creating a variable. We know `distanceFromLeft` is the name of the variable. We also know that `50` was the intial value. Using this knowledge we can infer that the syntax to create variables is `var variableName: variableType = value`. `var`, the `:` and the `=` are always there. _variableName_, _variableType_, and _value_ are what change.
 
  ## Naming a variable
@@ -164,4 +164,4 @@ var distanceFromLeft: Int = 50
 import XCPlayground
 import Foundation
 let results = CrushTheBlockIScene.setup(distanceFromLeft)
-XCPlaygroundPage.current
+XCPlaygroundPage.currentPage.liveView = results

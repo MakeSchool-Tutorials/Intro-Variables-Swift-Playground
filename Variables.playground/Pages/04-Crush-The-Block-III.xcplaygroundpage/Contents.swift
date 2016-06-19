@@ -95,4 +95,4 @@ let windForce: Int = random() % 25 + 50
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = CrushTheBlockIIIScene.setup(forceToApply: force, windSpeed: windForce)
-XCPlaygroundPage.current
+XCPlaygroundPage.currentPage.liveView = results

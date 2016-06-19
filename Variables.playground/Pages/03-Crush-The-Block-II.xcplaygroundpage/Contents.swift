@@ -43,7 +43,7 @@
  `Cannot assign to value: 'force' is a 'let' constant`
 
  Below that, it even gives you a recommendation of how to fix it (`Change 'let' to 'var' to make it mutable`).
- 
+
  ## 'let' constant
 
  Using the keyword `let` instead of `var` creates a _constant_ instead of creating a _variable_. Constants (like variables) are used to store data for using later on. A _constant_ cannot change -- it must remain it's intial value. This means we cannot reassign a constant.
@@ -96,4 +96,4 @@
 //:This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
 let results = CrushTheBlockIIScene.setup(force)
-XCPlaygroundPage.current
+XCPlaygroundPage.currentPage.liveView = results
