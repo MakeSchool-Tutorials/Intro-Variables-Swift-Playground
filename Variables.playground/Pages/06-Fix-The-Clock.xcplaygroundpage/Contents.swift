@@ -88,7 +88,7 @@ let hourRotation = 0
 
  - note: `60` is used in both equations since there are 60 seconds in a minute and 60 minutes in an hour.
 
- - challenge: Time to get that clock working!
+ - callout(Challenge): Time to get that clock working!
 
 */
 
