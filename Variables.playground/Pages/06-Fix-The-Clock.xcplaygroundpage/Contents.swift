@@ -15,6 +15,9 @@ srandom(UInt32(time(nil)))
 let hours: Double = Double(random() % 12 + 1)
 let minutes: Double = Double(random() % 60)
 let seconds: Double = Double(random() % 60)
+var hourRotation = 0
+var secondRotation = 0
+var minuteRotation = 0
 
 /*:
 
@@ -43,7 +46,7 @@ let doubleDivisionExample: Double = 15 / 4
 
  The way you’re going to control the clock hands is by setting the variables `secondRotation`, `minuteRotation`, and `hourRotation`, which control the rotation of the clock hands.
 
- To get some intuition for this, set one of their values to a number between 0 and 360. This number corresponds to the number of degrees the hand is rotated from its start position (pointing straight up).
+ - callout(Try it out): To get some intuition for this, set one of their values to a number between 0 and 360. This number corresponds to the number of degrees the hand is rotated from its start position (pointing straight up).
 
  For those unfamiliar, degrees are a measurement of rotation. When an object is rotated in a full circle so that it’s facing the same direction it started, we say it’s rotated 360 degrees. Halfway, so that it’s facing the opposite direction is half of 360 (so 180).
 
@@ -53,7 +56,7 @@ let doubleDivisionExample: Double = 15 / 4
 
 */
 
-
+secondRotation = 0
 
 /*:
 
@@ -77,7 +80,7 @@ let doubleDivisionExample: Double = 15 / 4
 
 */
 
-let hourRotation = 0
+hourRotation = 0
 
 /*:
 
@@ -92,8 +95,8 @@ let hourRotation = 0
 
 */
 
-let secondRotation = 0
-let minuteRotation = 0
+secondRotation = 0
+minuteRotation = 0
 
 /*:
 
