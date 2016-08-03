@@ -52,7 +52,7 @@ var signText: String = "This is not a sign."
 
  This is another compiler error. It happened because the compiler has noticed you’re trying to change the type of this variable, which, in Swift, is not allowed.  This variable was defined as a String when it was created, not as an Int.
 
- - challenge: With what you know now, make the sign say "Danger" and watch the lemmings survive!
+ - callout(Challenge): With what you know now, make the sign say "Danger" and watch the lemmings survive!
 
 */
 
@@ -64,23 +64,23 @@ var signText: String = "This is not a sign."
 
  As one more exercise in understanding Strings, we’re going to teach you how to make a string that contains double quotes inside it.  Let’s try putting the string:
 
-    "this is "totally" ironic"
+    ""Danger" zone"
 
  on the sign.  Before even typing anything, you probably notice that’s confusing to look at.  Your eyes are having the same difficulty a computer would; how is that just one String?  Double quotes are used to mark the beginning and end of a string, so we see two Strings:
 
-    "this is "
+    ""
 
  and
 
-    " ironic"
+    " zone"
 
  and the "naked"
 
-    totally
+    Danger
 
  is just floating out there. In Swift, we can remedy this by changing the string to be:
 
-    "this is \"totally\" ironic"
+    "\"Danger\" zone"
 
  Store the above `String` in the `signText` variable so that the sign will show it!
 
