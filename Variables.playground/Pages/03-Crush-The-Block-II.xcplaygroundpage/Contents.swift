@@ -10,7 +10,8 @@
 
 */
 
-let force: Int = 0
+// should be changed by student until they find the correct value
+let force: Int = 80
 
 /*:
 
@@ -25,8 +26,9 @@ let force: Int = 0
  Try entering `force = 0` below to _reassign the force to zero_.
 
 */
-
-
+// added specifically to show students what errors look like
+// removed so it still runs
+// force = 0
 
 /*:
 
