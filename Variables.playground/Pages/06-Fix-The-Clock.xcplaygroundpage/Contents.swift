@@ -15,9 +15,9 @@ srandom(UInt32(time(nil)))
 let hours: Double = Double(random() % 12 + 1)
 let minutes: Double = Double(random() % 60)
 let seconds: Double = Double(random() % 60)
-var hourRotation = 0
-var secondRotation = 0
-var minuteRotation = 0
+var hourRotation: Double = 0
+var secondRotation: Double = 0
+var minuteRotation: Double = 0
 
 /*:
 
