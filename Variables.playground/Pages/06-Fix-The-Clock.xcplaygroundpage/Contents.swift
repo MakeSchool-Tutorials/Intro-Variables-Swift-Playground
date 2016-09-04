@@ -95,8 +95,7 @@ hourRotation = 0
 
 */
 
-secondRotation = 0
-minuteRotation = 0
+
 
 /*:
 
