@@ -149,6 +149,6 @@ var signText: String = "This is not a sign."
 
 
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
-import XCPlayground
+import PlaygroundSupport
 let results = SaveTheLemmingsScene.setup(stringForSign: signText)
-XCPlaygroundPage.currentPage.liveView = results
+PlaygroundPage.current.liveView = results

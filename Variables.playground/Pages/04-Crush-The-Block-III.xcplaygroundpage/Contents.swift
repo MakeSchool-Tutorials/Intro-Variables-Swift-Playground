@@ -1,5 +1,4 @@
 import Foundation
-srandom(UInt32(time(nil)))
 /*:
  ![Make School Banner](./swift_banner.png)
  # Crush the Block III
@@ -93,6 +92,6 @@ let force: Int = 80
 
 
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
-import XCPlayground
+import PlaygroundSupport
 let results = CrushTheBlockIIIScene.setup(forceToApply: force, windSpeed: windForce)
-XCPlaygroundPage.currentPage.liveView = results
+PlaygroundPage.current.liveView = results

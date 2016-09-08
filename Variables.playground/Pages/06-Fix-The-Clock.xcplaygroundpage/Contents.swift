@@ -1,5 +1,4 @@
 import Foundation
-srandom(UInt32(time(nil)))
 /*:
  ![Make School Banner](./swift_banner.png)
  # Fix the Clock
@@ -145,6 +144,6 @@ secondRotation = 0
 
 
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
-import XCPlayground
+import PlaygroundSupport
 let results = FixTheClockScene.setup(hours: Int(hours), minutes: Int(minutes), seconds: Int(seconds), hourRotation: Int(hourRotation), minuteRotation: Int(minuteRotation), secondRotation: Int(secondRotation))
-XCPlaygroundPage.currentPage.liveView = results
+PlaygroundPage.current.liveView = results

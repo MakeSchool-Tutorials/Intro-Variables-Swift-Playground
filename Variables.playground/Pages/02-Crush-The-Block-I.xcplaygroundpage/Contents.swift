@@ -161,7 +161,7 @@ var distanceFromLeft: Int = 50
 
 
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
-import XCPlayground
 import Foundation
 let results = CrushTheBlockIScene.setup(crusherPosition: distanceFromLeft)
-XCPlaygroundPage.currentPage.liveView = results
+import PlaygroundSupport
+PlaygroundPage.current.liveView = results
