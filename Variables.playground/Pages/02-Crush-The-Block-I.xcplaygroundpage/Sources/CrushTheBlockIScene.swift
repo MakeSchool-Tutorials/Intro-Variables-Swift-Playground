@@ -37,7 +37,7 @@ public class CrushTheBlockIScene: SKScene, SKPhysicsContactDelegate {
         instructions = childNode(withName: "instructions") as? SKLabelNode
     }
     
-    public func didBeginContact(contact: SKPhysicsContact) {
+    public func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.contactTestBitMask == blockCategory && contact.bodyB.contactTestBitMask == blockCategory && instructions?.text != "Success!" {
             crushee?.removeFromParent()
             

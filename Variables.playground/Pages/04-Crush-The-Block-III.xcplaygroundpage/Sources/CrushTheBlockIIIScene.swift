@@ -40,7 +40,7 @@ public class CrushTheBlockIIIScene: SKScene, SKPhysicsContactDelegate {
         snowParticle.advanceSimulationTime(30)
     }
     
-    public func didBeginContact(contact: SKPhysicsContact) {
+    public func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.contactTestBitMask == blockCategory && contact.bodyB.contactTestBitMask == blockCategory {
             crushee?.removeFromParent()
             
