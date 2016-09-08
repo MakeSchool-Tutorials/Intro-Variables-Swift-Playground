@@ -30,24 +30,24 @@ public class FixTheClockScene: SKScene, SKPhysicsContactDelegate {
     var minuteRotation = 0
     var secondRotation = 0
     
-    override public func didMoveToView(view: SKView) {
-        instructions = childNodeWithName("instructions") as? SKLabelNode
+    override public func didMove(to view: SKView) {
+        instructions = childNode(withName: "instructions") as? SKLabelNode
         
         let timeString = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
         
-        timeLabel = childNodeWithName("timeLabel") as? SKLabelNode
+        timeLabel = childNode(withName: "timeLabel") as? SKLabelNode
         timeLabel?.text = "The time is \(timeString)"
         
-        let clock = childNodeWithName("clock")!
+        let clock = childNode(withName: "clock")!
         
-        hourHand = clock.childNodeWithName("hourHand")
-        hourHand?.zRotation = -degreesToRadians(hourRotation)
+        hourHand = clock.childNode(withName: "hourHand")
+        hourHand?.zRotation = -degreesToRadians(degrees: hourRotation)
         
-        minuteHand = clock.childNodeWithName("minuteHand")
-        minuteHand?.zRotation = -degreesToRadians(minuteRotation)
+        minuteHand = clock.childNode(withName: "minuteHand")
+        minuteHand?.zRotation = -degreesToRadians(degrees: minuteRotation)
         
-        secondHand = clock.childNodeWithName("secondHand")
-        secondHand?.zRotation = -degreesToRadians(secondRotation)
+        secondHand = clock.childNode(withName: "secondHand")
+        secondHand?.zRotation = -degreesToRadians(degrees: secondRotation)
         
         let correctHourRotation = Int(Double(hours) / 12 * 360)
         let correctMinuteRotation = Int(Double(minutes) / 60 * 360)
@@ -60,12 +60,12 @@ public class FixTheClockScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    public class func setup(hours hours: Int, minutes: Int, seconds: Int, hourRotation: Int, minuteRotation: Int, secondRotation: Int) -> SKView {
+    public class func setup(hours: Int, minutes: Int, seconds: Int, hourRotation: Int, minuteRotation: Int, secondRotation: Int) -> SKView {
         let sceneView = SKView(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
         sceneView.wantsLayer = true
         let scene = FixTheClockScene(fileNamed: "FixTheClockScene")!
         
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .aspectFill
         
         scene.hours = hours
         scene.minutes = minutes

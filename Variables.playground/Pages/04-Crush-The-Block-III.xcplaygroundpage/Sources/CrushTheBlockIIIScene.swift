@@ -20,23 +20,23 @@ public class CrushTheBlockIIIScene: SKScene, SKPhysicsContactDelegate {
     var animation: SKSpriteNode?
     var instructions: SKLabelNode?
     
-    override public func didMoveToView(view: SKView) {
+    override public func didMove(to view: SKView) {
         physicsWorld.contactDelegate = self
         
-        crusher = childNodeWithName("crusher")
+        crusher = childNode(withName: "crusher")
         crusher?.physicsBody?.contactTestBitMask = blockCategory
         
-        crusher?.physicsBody?.applyImpulse(CGVectorMake(CGFloat(crusherVelocity), 0.0))
+        crusher?.physicsBody?.applyImpulse(CGVector(dx: CGFloat(crusherVelocity), dy: 0.0))
         
-        crushee = childNodeWithName("crushee")
+        crushee = childNode(withName: "crushee")
         crushee?.physicsBody?.contactTestBitMask = blockCategory
         
-        crushedAnimation = childNodeWithName("crushedAnimation")
+        crushedAnimation = childNode(withName: "crushedAnimation")
         animation = SKSpriteNode(fileNamed: "crushed.sks")!
         
-        instructions = childNodeWithName("instructions") as? SKLabelNode
+        instructions = childNode(withName: "instructions") as? SKLabelNode
         
-        let snowParticle = childNodeWithName("snowParticle") as! SKEmitterNode
+        let snowParticle = childNode(withName: "snowParticle") as! SKEmitterNode
         snowParticle.advanceSimulationTime(30)
     }
     
@@ -45,7 +45,7 @@ public class CrushTheBlockIIIScene: SKScene, SKPhysicsContactDelegate {
             crushee?.removeFromParent()
             
             if let animation = animation {
-                let child = animation.childNodeWithName("animation")!
+                let child = animation.childNode(withName: "animation")!
                 child.removeFromParent()
                 crushedAnimation?.addChild(child)
             }
@@ -58,7 +58,7 @@ public class CrushTheBlockIIIScene: SKScene, SKPhysicsContactDelegate {
         let sceneView = SKView(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
         sceneView.wantsLayer = true
         let scene = CrushTheBlockIIIScene(fileNamed: "CrushTheBlockIIIScene")!
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .aspectFill
         
         scene.crusherVelocity = max(crusherVelocity - windSpeed, 0)
         

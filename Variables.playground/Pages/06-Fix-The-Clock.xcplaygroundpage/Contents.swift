@@ -12,9 +12,9 @@ srandom(UInt32(time(nil)))
 
 */
 
-let hours: Double = Double(random() % 12 + 1)
-let minutes: Double = Double(random() % 60)
-let seconds: Double = Double(random() % 60)
+let hours: Double = Double(Int(arc4random()) % 12 + 1)
+let minutes: Double = Double(Int(arc4random()) % 60)
+let seconds: Double = Double(Int(arc4random()) % 60)
 var hourRotation: Double = 0.0
 var secondRotation: Double = 0.0
 var minuteRotation: Double = 0.0
@@ -90,7 +90,8 @@ secondRotation = 0
     `minuteRotation` is `minutes` divided by 60, multiplied by 360 degrees
 
  - note: `60` is used in both equations since there are 60 seconds in a minute and 60 minutes in an hour.
-
+ 
+ 
  - callout(Challenge): Time to get that clock working!
 
 */

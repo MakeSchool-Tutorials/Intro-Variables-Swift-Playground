@@ -52,6 +52,7 @@ let force: Int = 0
 
  - note: It is best to use `let` instead of `var` whenever possible. Swift will sometimes even "complain" to you (with a _compiler warning_) if you use `var` when it was possible to use `let`.
 
+ 
  - important: the Playground cannot run while there are errors (any red marks). Make sure to remove `force = 0` from above since it is not needed.
 */
 //: [Previous](@previous) | [Next](@next)
@@ -95,5 +96,5 @@ let force: Int = 0
 
 //:This is special code required to make the mini-game work. You do NOT need to understand it right now.
 import XCPlayground
-let results = CrushTheBlockIIScene.setup(force)
+let results = CrushTheBlockIIScene.setup(crusherVelocity: force)
 XCPlaygroundPage.currentPage.liveView = results

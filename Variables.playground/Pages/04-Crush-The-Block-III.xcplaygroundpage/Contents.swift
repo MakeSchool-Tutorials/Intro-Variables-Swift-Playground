@@ -14,17 +14,17 @@ srandom(UInt32(time(nil)))
 
  */
 
-let windForce: Int = random() % 25 + 50
+let windForce: Int = Int(arc4random()) % 25 + 50
 
 /*:
 
- Unfortunately for us, this isn’t something simple like `let windForce: Int = 4`, instead, we have `let windForce: Int = random() % 25 + 50`. You'll be able to understand this soon enough but for now, just trust us that windForce is a random number between `50` and `74` inclusive.
+ Unfortunately for us, this isn’t something simple like `let windForce: Int = 4`, instead, we have `let windForce: Int = Int(arc4random()) % 25 + 50`. You'll be able to understand this soon enough but, for now, just trust us that `windForce` is a random number between `50` and `74` inclusive.
 
  `windForce` will change every time the game is run (at least every time you change the code) so you cannot count on it being any specific value.
 
  In a _Playground_, the value of an expression is shown to the far right of the line of code:
 
- ![](imgs/random_number.png)
+ ![](imgs/random.png)
 
  In the above screenshot you can see the windForce with a value of `52` (look at the far right side). This changes every time the playground runs (every time the code changes). You can also manually re-run a playground by toggling the stop/play buttons at the bottom:
 
@@ -36,7 +36,7 @@ let windForce: Int = random() % 25 + 50
 
 */
 
- let force: Int = 80
+let force: Int = 80
 
 /*:
 
