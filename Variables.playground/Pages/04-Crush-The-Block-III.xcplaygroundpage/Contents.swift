@@ -35,7 +35,7 @@ let windForce: Int = Int(arc4random()) % 25 + 50
 
 */
 
-let force: Int = 80
+let force: Int = 80 + windForce
 
 /*:
 
