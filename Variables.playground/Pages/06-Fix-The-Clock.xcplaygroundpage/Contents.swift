@@ -15,9 +15,9 @@ srandom(UInt32(time(nil)))
 let hours: Double = Double(random() % 12 + 1)
 let minutes: Double = Double(random() % 60)
 let seconds: Double = Double(random() % 60)
-var hourRotation: Double = 0
-var secondRotation: Double = 0
-var minuteRotation: Double = 0
+var hourRotation: Double = 0.0
+var secondRotation: Double = 0.0
+var minuteRotation: Double = 0.0
 
 /*:
 
@@ -48,11 +48,11 @@ let doubleDivisionExample: Double = 15 / 4
 
  - callout(Try it out): To get some intuition for this, set one of their values to a number between 0 and 360. This number corresponds to the number of degrees the hand is rotated from its start position (pointing straight up).
 
- For those unfamiliar, degrees are a measurement of rotation. When an object is rotated in a full circle so that it’s facing the same direction it started, we say it’s rotated 360 degrees. Halfway, so that it’s facing the opposite direction is half of 360 (so 180).
+    For those unfamiliar, degrees are a measurement of rotation. When an object is rotated in a full circle so that it’s facing the same direction it started, we say it’s rotated 360 degrees. Halfway, so that it’s facing the opposite direction is half of 360 (so 180).
 
- As an example, here’s how setting `secondRotation = 115` should look:
+    As an example, here’s how setting `secondRotation = 115` should look:
 
- ![](imgs/115_seconds.png)
+    ![](imgs/115_seconds.png)
 
 */
 
@@ -72,7 +72,7 @@ secondRotation = 0
 
  To write that in code, we would say:
 
- hourRotation = hours / 12 * 360
+    hourRotation = hours / 12 * 360
 
  Remember, the * symbol is the Swift equivalent of the multiplication sign, and / is Swift’s division sign. In computer science speak, these are examples of operators.
 
@@ -80,7 +80,7 @@ secondRotation = 0
 
 */
 
-hourRotation = 0
+
 
 /*:
 
