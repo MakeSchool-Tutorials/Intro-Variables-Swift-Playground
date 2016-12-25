@@ -25,7 +25,7 @@ let windForce: Int = Int(arc4random()) % 25 + 50
 
  ![](imgs/random.png)
 
- In the above screenshot you can see the windForce with a value of `52` (look at the far right side). This changes every time the playground runs (every time the code changes). You can also manually re-run a playground by toggling the stop/play buttons at the bottom:
+ In the above screenshot you can see the windForce with a value of `64` (look at the far right side). This changes every time the playground runs (every time the code changes). You can also manually re-run a playground by toggling the stop/play buttons at the bottom:
 
  ![](imgs/toggle_run.gif)
 
