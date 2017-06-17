@@ -49,7 +49,7 @@ let force: Int = 80
 
  Another way to translate the line of code we’ve just written is this: "set the constant force to be equal to the output of the math on the right side of the equal sign" and then we can translate that math into "80 plus the value of the variable windForce."
 
- - note: The plus sign, by the way, between 80 and windSpeed is one of many operators you can use to do math between number variables.  Others include + for addition, / for division, and * for multiplication.  You can also use parentheses to determine order of operations, but be aware that, unlike in normal math, something like `(x) y` does not mean (x) times y.  You need to explicitly put a multiplication operator between any values you want to multiply, so `(x) * y` or even just `x * y` would be valid.
+ - note: The plus sign, by the way, between 80 and windSpeed is one of many operators you can use to do math between number variables.  Others include `-` for subtraction, `/` for division, and `*` for multiplication.  You can also use parentheses to determine order of operations, but be aware that, unlike in normal math, something like `(x) y` does not mean (x) times y.  You need to explicitly put a multiplication operator between any values you want to multiply, so `(x) * y` or even just `x * y` would be valid.
 
 */
 //: [Previous](@previous) | [Next](@next)
