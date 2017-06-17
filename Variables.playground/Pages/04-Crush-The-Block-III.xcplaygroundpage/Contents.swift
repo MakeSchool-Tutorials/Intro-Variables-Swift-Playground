@@ -41,7 +41,7 @@ let force: Int = 80
 
  ## Did that work?
 
- Hopefully you got it working. If not, make sure the line above reads `let force: Int = 80 + windForce`. The spaces around the plus operator need to be there for the computer to correctly compute the value!
+ Hopefully you got it working. If not, make sure the line above reads `let force: Int = 80 + windForce`. The spaces around the plus operator need to even (putting a space only on one side won't work) for the computer to correctly compute the value!
 
  What does this line of code say, and why does it work?
 
