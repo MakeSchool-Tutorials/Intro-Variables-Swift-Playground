@@ -16,7 +16,7 @@ var signText: String = "This is not a sign."
 
  If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign.
 
- - callout(Try it out!): Try updating the `signText` variable so that the sign show's your name. Remember to use double quotes (`"`) around your new _String_!
+ - callout(Try it out!): Try updating the `signText` variable so that the sign shows your name. Remember to use double quotes (`"`) around your new _String_!
 
 */
 
