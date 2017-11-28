@@ -51,8 +51,8 @@ let force: Int = 0
  You should use `let` to create constants when you want to store data that won't be changed later in the code. If the value might need to be reassigned then you'll have to use `var` to create a variable. This works because variables are "mutable" (can be changed). Constants on the other hand are "immutable" (can not change).
 
  - note: It is best to use `let` instead of `var` whenever possible. Swift will sometimes even "complain" to you (with a _compiler warning_) if you use `var` when it was possible to use `let`.
-
- 
+ */
+/*:
  - important: the Playground cannot run while there are errors (any red marks). Make sure to remove `force = 0` from above since it is not needed.
 */
 //: [Previous](@previous) | [Next](@next)

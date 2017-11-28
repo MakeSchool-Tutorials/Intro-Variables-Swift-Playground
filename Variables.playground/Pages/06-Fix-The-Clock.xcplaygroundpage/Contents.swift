@@ -89,8 +89,8 @@ secondRotation = 0
     `minuteRotation` is `minutes` divided by 60, multiplied by 360 degrees
 
  - note: `60` is used in both equations since there are 60 seconds in a minute and 60 minutes in an hour.
- 
- 
+ */
+/*:
  - callout(Challenge): Time to get that clock working!
 
 */
