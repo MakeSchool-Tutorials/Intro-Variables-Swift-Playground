@@ -1,12 +1,12 @@
 /*:
  ![Make School Banner](./swift_banner.png)
- # Crush the Block II
+ # ブロックくずし II
 
- Let's get started with the next challenge! This playground controls the _Crush the Block II_, the exciting sequel to the Crush the Block microgame.
+ 次のチャレンジに挑戦しよう！このPlaygroundでは、ブロックくずしの続編「ブロックくずしII」で遊びます。
 
- This time, in order to crush the block, you need to change the variable called force to make the block on the left jump off the platform and hit block on the right. `force` is the amount of rightward force applied to the block. You'll need to find the right value -- too high and you'll overshoot, too low and you won't make it across the gap!
+ 今回は、ブロックをくずすためには’force’と呼ばれる変数を編集して左のブロックをジャンプさせて右のブロックにあてなければなりません。’force’とは、右に向かってかけるエネルギーのことで、ちょうど良い力加減を見つけなければなりません。強すぎると飛びすぎますし、弱すぎると溝に落ちてしまいます。
 
- Start off by changing `0` to `10`. You might not see any changes until you get to higher values. Keep trying until you get it just right.
+ まずは’0’を’10’に修正してみましょう。違いが分かりずらいかもしれませんが、ちょうど良いところまで少しずつ大きな値に修正していきます。
 
 */
 
@@ -14,15 +14,15 @@ let force: Int = 0
 
 /*:
 
- Got it? Great!
+ できたかな？やったあ！
 
- You might have noticed that there was one tiny difference between this code and the previous exercise: the word `let` is used instead of `var`. What is that all about?
+ このコードと、さっきの練習のコードとの違いに気が付きましたか？ここでは`var`の代わりに`let`が使われていますね。
 
- `var` is a keyword that tells the Swift compiler "create a variable". In the previous exercise, we created an `Int` type variable for you and gave it an initial value of `50` (using `var distanceFromLeft: Int = 50`). Throughout the exercise you continued to change the variable without using the var keyword (`distanceFromLeft = 160`). `var` and the type (`Int`) is only needed the first time a variable is encountered.
+ `var`はSwiftに「変数を設定しろ」と指示を出すキーワードでした。さっきの練習では`Int`というデータタイプで50という値を設定しました。(`var distanceFromLeft: Int = 50`　という式でしたね) 練習ではvarというキーワードを変えずに変数を修正しました。(`distanceFromLeft = 160`といった具合に)`var` やデータタイプ(`Int`)は新しい変数が登場する時だけに必要なのです。
 
- So what does `let` mean? Let's experiment and see if we can figure it out...
+ では`let`はどういう意味でしょう？実験をしながら解明できるでしょうか...
 
- Try entering `force = 0` below to _reassign the force to zero_.
+ `force = 0`と入力してforceをゼロに直しましょう。
 
 */
 
@@ -32,28 +32,29 @@ let force: Int = 0
 
  ![](imgs/let_error.png)
 
- ## OH NO! EVERYTHING IS TERRIBLE!
+ ## 全部めちゃくちゃだ！
 
- Don't panic! We’ve just encountered a _compiler error_. The color red is used to indicate bits of code the compiler doesn’t like.
+ 焦る必要はないです。コンパイルエラーを起こしただけです。コンピューターは嫌いなコードを赤色で示してくれます。
 
- But why does it not like this line? Lucky for us, the compiler also tells us exactly what is wrong and even gives us a suggestion on how to fix it (you might need to click the red error octogon to see this information).
+ でもコンピューターはどうしてこの行が嫌いなのでしょうか？幸いなことに、コンピューターは間違っている点とその直し方の提案を、丁寧に示してくれます。(赤色の八角形をクリックすると表示されます)
 
- When you get an error, you can often find out what the issue is by reading the error message.  In this case, we get an error of:
+ エラーが起きたら、だいたいの場合エラーメッセージを読むと原因が分かります。ここでは:
 
- `Cannot assign to value: 'force' is a 'let' constant`
+ `Cannot assign to value: 'force' is a 'let' constant`('force' は 'let'定数であるため、値を設定できません)
 
- Below that, it even gives you a recommendation of how to fix it (`Change 'let' to 'var' to make it mutable`).
+ その下には、直し方のアドバイスを示してくれていますね。('let'を’'var'に変更してミュータブル(変更可能)にしてください)
 
- ## 'let' constant
+ ## 'let' 定数
 
- Using the keyword `let` instead of `var` creates a _constant_ instead of creating a _variable_. Constants (like variables) are used to store data for using later on. A _constant_ cannot change -- it must remain it's intial value. This means we cannot reassign a constant.
+ `var` の代わりに’let’というキーワードを使うと変数ではなく定数が設定されます。定数は、(変数を同じように) 後で必要となる特定の値を保管するために使われます。しかし定数は変更がききません。もともと設定した値から変えられないのです。
 
- You should use `let` to create constants when you want to store data that won't be changed later in the code. If the value might need to be reassigned then you'll have to use `var` to create a variable. This works because variables are "mutable" (can be changed). Constants on the other hand are "immutable" (can not change).
+ 後で変えることのない値は、`let`を使い定数として保管しておきます。逆に、後で変えるような値であれば`var`を使い変数として設定しておきます。つまり変数はミュータブル(変更可能)な値なのです。一方の定数はイミュータブル(変更不可)なわけです。
 
- - note: It is best to use `let` instead of `var` whenever possible. Swift will sometimes even "complain" to you (with a _compiler warning_) if you use `var` when it was possible to use `let`.
+ - note; 出来る限り`var`ではなく`let`を使いましょう。`let`を使えるところで’var’を使っていると、Swiftから怒られることもあります。
+
  */
 /*:
- - important: the Playground cannot run while there are errors (any red marks). Make sure to remove `force = 0` from above since it is not needed.
+  - 重要：Playgroundはエラー(赤い印)がある状態ではコードを実行できません。先程の`force = 0`はいらないので削除しましょう。
 */
 //: [Previous](@previous) | [Next](@next)
 

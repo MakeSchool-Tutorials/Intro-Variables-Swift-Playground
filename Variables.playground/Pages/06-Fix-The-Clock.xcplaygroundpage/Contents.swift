@@ -1,13 +1,13 @@
 import Foundation
 /*:
  ![Make School Banner](./swift_banner.png)
- # Fix the Clock
+ # 時計を修理せよ
 
- In _Fix the Clock_, your job is to make the three hands of the analogue clock match the time on the digital one! Every frame, your code will read new values for the time in hours, minutes, and seconds.
+ ここでは、アナログ時計の3本の針をデジタル時計の時間に合わせることがあなたのミッションです。あなたの書いたコードは、フレームごとに時間、分、秒の値を新しく読み込みます。
 
- The constants containing the current time are `hours`, `minutes`, and `seconds`. Each of these are a randomized `Double` type. Can you guess why we use a `Double`?
+ 現在時刻は’時間’、’分’、’秒’の定数で構成されています。これらはそれぞれランダマイズされた `Double`のデータタイプを使っています。どうして `Double`を使うのか分かりますか？
 
- We are using a few concepts we haven't taught you yet to randomize these values. Don't worry though, you'll understand them in the next set of challenges when we teach you functions!
+ ここでは値をランダマイズするために、まだ教えていないコンセプトを使っていますが、心配することはありません。この後に続くチャレンジで関数を勉強すれば、きっと理解できるようになります。
 
 */
 
@@ -20,11 +20,11 @@ var minuteRotation: Double = 0.0
 
 /*:
 
- ## Why do we need to use Double type?
+ ## どうしてDoubleのデータタイプを使うのか?
 
- Prior to this challenge we have only dealt with `Int` and `String` types. `Int` works great for whole numbers but cannot store any non-integer numbers.
+ ここまでは`Int` と `String`の2種類のデータタイプだけ使ってきましたね。`Int`は整数を使うときには大変便利ですが、少数を扱うことはできません。
 
- We'll need non-whole number division results to calculate rotation angles. The `Double` type is just the type we are looking for since a `Double` is a non-integer number!
+ 回転角度を定めるためには、少数を含む割り算結果を使う必要があります。こんな時には少数を扱える`Double`がピッタリです。
 
 */
 
@@ -33,23 +33,27 @@ let doubleDivisionExample: Double = 15 / 4
 
 /*:
 
- ## Where Int falls short
+ ## Intの欠点
 
- `Int` is a whole number. When you divide an `Int` by an `Int` and ask for an `Int` result you lose "precision". Look at the example above.
+ `Int`は整数です。`Int`を`Int`で割った答えも`Int`として求めると、正確性が下がります。
 
- `integerDivisionExample` contains the result of 15 divided by 4. It stores the result as an `Int`. `doubleDivisionExample` contains the result of the _same_ expression but stores it as a `Double`. `doubleDivisionExample` shows us an accurate result while `integerDivisionExample` just throws away the extra data after the decimal point (`0.75`).
+ `integerDivisionExample`は15を4で割った答えを`Int`の形で保管しています。
+ `doubleDivisionExample`は同じ式の答えを保管していますが、データの種類は`Double`です。
+ `doubleDivisionExample`の値は正確ですが、`integerDivisionExample`の値は小数点以下(`0.75`)のデータを切り捨ててしまうので正確性に劣ります。
+
 
  ![](imgs/division_example.png)
 
- ## Setting the time
+ ## 時間の設定
 
- The way you’re going to control the clock hands is by setting the variables `secondRotation`, `minuteRotation`, and `hourRotation`, which control the rotation of the clock hands.
+ `secondRotation`, `minuteRotation`, `hourRotation`という3つの変数で時計の針の回転をコントロールします。
 
- - callout(Try it out): To get some intuition for this, set one of their values to a number between 0 and 360. This number corresponds to the number of degrees the hand is rotated from its start position (pointing straight up).
+ - callout(やってみよう): より直感的に理解するため、値のどれかに0から360の間の数字を入力してみましょう。この値は12時の方向からの回転角度を示します。
 
-    For those unfamiliar, degrees are a measurement of rotation. When an object is rotated in a full circle so that it’s facing the same direction it started, we say it’s rotated 360 degrees. Halfway, so that it’s facing the opposite direction is half of 360 (so 180).
+    知らない人のために補足すると、角度は回転の度合いを測る単位です。ある物体が1回転する(最初の位置に戻る)角度は360度であり、その半分(最初と反対の向きになる)は180度となります。
 
-    As an example, here’s how setting `secondRotation = 115` should look:
+
+    例えば、`secondRotation = 115`と設定するとこのように動きます。
 
     ![](imgs/115_seconds.png)
 
@@ -59,23 +63,23 @@ secondRotation = 0
 
 /*:
 
- ## Calculating the rotation
+ ## 回転の計算
 
- In order to figure out the rotation for the hands, you’re going to tell the computer to solve for the rotation, using an equation that we’ll give you and that you’ll translate into code. To get you started, we’ll walk you through setting the hour hand.
+ 針の回転幅を定めるために、コンピューターにこれから教える方程式を使った計算の指示を出し、回転幅を計算させます。まずは一緒に時間の針の設定を進めましょう。
 
- The number of degrees the hour hand should move can be found using the following equation:
+ 時間の針が回転すべき確度は次の方程式によって求められます。
 
-    `hourRotation` is `hours` divided by 12, multiplied by 360 degrees
+    `hourRotation` は `hours` ワル12, カケル360度です。
 
- - note: This works because we want the hour hand to point to the same number on the clock as the hour. There are 12 numbers on the clock, so the 1 is located 1/12th of the way around the clock, the 2 is located 2/12ths of the way around the clock, and so on. We’ve noticed that, as a rule, an hour with the value `hours` is located `hours/12` of the way around the circle. We know that the total number of degrees in a circle is 360, or 360 x hours/12.
+ - note: 時間の針をデジタル時計の時間表示と同じ数字の方向に向けます。アナログ時計には全部で12の数字が書かれているので、1は一回転の1/12の位置にあるはずで、2は2/12の位置にあるはずです。すると`hours`の値の針は `hours/12`の位置にある、というルールがあることに気が付きます。1回転が360度なので、回転角度は360 x hours/12となるわけです。
 
- To write that in code, we would say:
+ これをコードにするには、このように書きます。
 
     hourRotation = hours / 12 * 360
 
- Remember, the * symbol is the Swift equivalent of the multiplication sign, and / is Swift’s division sign. In computer science speak, these are examples of operators.
+ Swiftでは*の記号は掛け算を、/は割り算を意味します。コンピューターサイエンスの世界では、これらの記号を「演算子」と呼びます。
 
- - callout(Try it out): Set `hourRotation` using this equation and check if it looks right!
+ - callout(やってみよう): この方程式を使って`hourRotation`を設定し、デジタル時計の表示とあっているか確認しましょう。
 
 */
 
@@ -83,15 +87,15 @@ secondRotation = 0
 
 /*:
 
- To set the other hands, use the following equations:
+ 残り2つの針の設定には次の方程式を使います。
 
-    `secondRotation` is `seconds` divided by 60, multiplied by 360 degrees
-    `minuteRotation` is `minutes` divided by 60, multiplied by 360 degrees
+    `secondRotation` は `seconds` ワル 60,カケル360度
+     `minuteRotation` は`minutes` ワル 60, カケル360度
 
- - note: `60` is used in both equations since there are 60 seconds in a minute and 60 minutes in an hour.
+  - note: どちらの式にも`60` を使うのは、60秒で1分、60分で1時間だからです。
  */
 /*:
- - callout(Challenge): Time to get that clock working!
+ - callout(チャレンジ): さあ時計を修理しよう！
 
 */
 
@@ -99,9 +103,9 @@ secondRotation = 0
 
 /*:
 
- Congratulations! That was a tricky one, but you did it. You have been exposed to a lot of new concepts: variables, constants, data types, operators and more... You have a lot of tools in your toolbox but we'll be adding more soon!
+ おめでとう！今回は難しかったけどうまくできましたね！変数、定数、データタイプ、演算子等、たくさんの新しいコンセプトを学びました。道具箱には既にたくさんの道具があるけれど、これからもっと増えますよ！
 
- That's all we have for this set of challenges. The next set of exercises will cover _functions_ or "blocks of code". This will allow you to reuse code you write and use code that others wrote! We'll also demystify how we randomized numbers throughout these challenges :)
+ このチャレンジはここまでです。次のチャレンジでは関数(コードのブロック)を学びます。関数を学ぶと自分で書いたコードを別の場面でもう一度使ったり、他の人が書いたコードを使ったりできるようになります！今回登場した値のランダマイズの謎も解けるはず :)
 
 */
 //: [Previous](@previous)

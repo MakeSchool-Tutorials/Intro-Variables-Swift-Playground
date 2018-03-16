@@ -1,19 +1,19 @@
 /*:
  ![Make School Banner](./swift_banner.png)
- # Very Able
- ## An Introduction to Variables
+ # 変数
+ ## 変数のきほん
 
- In this project we will "beat" some microgames by writing code! Never coded before or even seen code? Perfect :) We’ll show you what to do and explain it along the way.
+ このプロジェクトでは、コードを書いてマイクロゲームと勝負します。コードを書いたことも見たこともなくても大丈夫。やり方を見せながら説明していきます。
 
  ## Swift Playgrounds
 
- We will be using _Swift Playgrounds_ to teach you how to code. _Playgrounds_ are interactive coding environments that can contain instructions. The code you write gets run every time you make a change and visual output is displayed on the right. This makes it a great way to learn how to code!
+ Swift Playgroundsを使ってコードを学びます。Playgroundsとは色々な指示を組み入れられるインタラクティブなプログラミング環境です。コードは変更されるとその都度実行され、右側にビジュアルアウトプットが表示されます。こうしてコード作成がみるみる身に付きます！
 
- ## What you'll learn
+ ## 学ぶこと
 
- In these _Playgrounds_, you will learn how to use _variables_. _Variables_ are a way to store and refer to values by a readable name. _Variables_ can hold all sorts of values: a number, a word, or even complex collections of other variables!
+ まずは変数の使い方を学びます。変数とは名もなき値を保存したり引用したりするためのものです。変数は数字や言葉、さらには他の変数の組み合わせ等、様々な形をとることができます。
 
- - note: Press next to get started.
+ - note: "Next"を押してスタートしましょう。
 
 */
 //: [Next](@next)

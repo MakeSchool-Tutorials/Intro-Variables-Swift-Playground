@@ -1,12 +1,12 @@
 /*:
  ![Make School Banner](./swift_banner.png)
- # Save the Lemmings
+ # レミングを救え
 
- This microgame is about saving the lemmings (in particular, just one). We admittedly had a bit too much fun making this, but the gist is this: a lemming will walk up to the sign in the center of the screen, and, unless the sign reads `Danger` that lemming will jump off the cliff, to certain doom.
+ 新しいマイクロゲームを始めましょう。レミング(ネズミのような小動物)が画面中央の看板に向かって歩いていきます。看板に「危険」と書いていなければ、そのまま崖へ進み、落ちてしまします。
 
- Your job is to make the sign say `Danger`, so that no lemmings perish.
+ あなたのミッションは看板に「危険」と表示して、レミングを救うことです。
 
- Look at the line below. It creates a variable named `signText` of type `String` with the value `"This is not a sign."`
+ 次のコードを見てください。`signText`という変数に`String`のデータタイプで`"This is not a sign."という値が設定されています。
 
 */
 
@@ -14,25 +14,9 @@ var signText: String = "This is not a sign."
 
 /*:
 
- If you look at the microgame, you'll notice that everything in between the pair of double quotes (`"`) appears on the sign.
+ マイクロゲームを見ると、ダブルクオーテーション(`"`)の間の文字が看板に表れていることが分かります。
 
- - callout(Try it out!): Try updating the `signText` variable so that the sign shows your name. Remember to use double quotes (`"`) around your new _String_!
-
-*/
-
-
-
-/*:
-
- You should have entered something like `signText = "Your name here"` above.
-
- Just as before, you’ve set a variable, only this time, the variable was `String` type, not `Int`!
-
- ## This new type is called String type
-
- _String_ type represents what you might think of as words or sentences. _Strings_ are an ordered set of characters (also called "strings" of characters) -- like "Potato Salad", "$100", or "yippie ki-yay!".  In Swift, we can write strings as characters with double quotes (`"`) at the beginning and end, as you saw here.
-
- - note: Keep in mind that number characters can be used _in_ Strings.  That means that something like `"22"` (with quotes) is a String, not an Int.  Writing it without quotes as `22`, though, it is an Int. All variables are created with a specific type and can only store that type.  Our variable `signText` is `String` type. The compiler will be unhappy if you try to store an `Int` to a `String` variable... Let's experiment a bit, set text equal to the String `"22"`.  You should see a `22` in the middle of your sign, as you expect.
+  - callout(やってみよう!): `signText`を修正して、看板に自分の名前を表示してみましょう。Stringデータの両側にダブルクオーテーション(`"`)を付けることを忘れずに！
 
 */
 
@@ -40,19 +24,36 @@ var signText: String = "This is not a sign."
 
 /*:
 
- Now try taking out the quotes on the above line and see what happens...
+ 上のコードに’signText = "あなたの名前"` と入力できていればOKです
+
+ ここでも、これまでと同じように変数を設定しているのは変わりありませんが、今回はデータタイプに`Int`ではなく`String`を使っています。
+
+ ## Stringというデータタイプ
+
+ _String_ は単語や文章のようなデータタイプです。Stringは"Potato Salad"や "$100"、"yippie ki-yay!"といった文字の配列(文字のStringとも言う)なのです。Swiftでは、最初と最後にダブルクオーテーション(`"`)を付けて入力します。
+
+  - note: 数字もStringとして扱われることがあるので注意しましょう。例えば、`"22"`はStringでありIntではありません。ダブルクオーテーションを外して`22`と入力すると、これはIntとなります。変数は一つの決まったデータタイプにしか対応できません。`signText`変数のデータタイプは`String`です。もし`String`変数に`Int`データを入力してしまうと、コンピューターが嫌がります。ここで実験をしてみましょう。コードにStringデータの`"22"`と入力すると、看板には期待通り「22」と表示されます。
+
+*/
+
+
+
+/*:
+
+ ではダブルクオーテーションを外すとどうなるのでしょうか...
 
  ![](imgs/string_int_error.png)
 
- - note: Make sure to put the quotes back in!
+ - note: 実験が済んだらダブルクオーテーションを戻すのを忘れずに！
 
- ## Type errors
+ ## タイプエラー
 
-    Cannot assign value of type 'Int' to type 'String'
+    'Int'データタイプ値が見つけられません
 
- This is another compiler error. It happened because the compiler has noticed you’re trying to change the type of this variable, which, in Swift, is not allowed.  This variable was defined as a String when it was created, not as an Int.
+ これは別のエラーです。Swiftではデータタイプの変更ができないため、データタイプを変更しようとしたところ、これにコンピューターが反応したのです。この変数のデータタイプはStringとして定められており、Intは使えません。
 
- - callout(Challenge): With what you know now, make the sign say "Danger" and watch the lemmings survive!
+
+  - callout(チャレンジ):これまで学んだことを使って、看板に"Danger"と表示し、レミングが助かる様子を見てみましょう。
 
 */
 
@@ -60,29 +61,29 @@ var signText: String = "This is not a sign."
 
 /*:
 
-## A quick thought experiment
+## 頭の体操
 
- As one more exercise in understanding Strings, we’re going to teach you how to make a string that contains double quotes inside it.  Let’s try putting the string:
+ Stringの理解を深めるために、もうひとつだけ勉強しましょう。なかにダブルクオーテーションを含むStringの書き方を教えます。次のStringを看板に表示したいとします。
 
-    ""Danger" zone"
+     ""Danger" zone"
 
- on the sign.  Before even typing anything, you probably notice that’s confusing to look at.  Your eyes are having the same difficulty a computer would; how is that just one String?  Double quotes are used to mark the beginning and end of a string, so we see two Strings:
+ これを見るとすぐに、何だか分かりにくい、と感じるはずです。コンピューターもあなたと同じように感じます。果たしてこれはひとつのStringとして認識されるのでしょうか。最初と最後をダブルクオーテーションで挟まれたものがStringなので、これは2つのStringを示していることになります。
 
     ""
 
- and
+ と
 
     " zone"
 
- and the "naked"
+そして何にも挟まれていない
 
     Danger
 
- is just floating out there. In Swift, we can remedy this by changing the string to be:
+ は浮いています。Swiftでは次のようにしてこの問題を直すことができます。
 
     "\"Danger\" zone"
 
- Store the above `String` in the `signText` variable so that the sign will show it!
+ 上のテキストを`signText`変数に当てはめると、看板に表示されます。
 
 */
 
@@ -90,13 +91,13 @@ var signText: String = "This is not a sign."
 
 /*:
 
- ## Escape characters
+ ## エスケープ文字
 
- The character combination backslash double quote ( `\"` ) is interpreted in a string as just a double quote ( `"` ).  In fact, Swift always expects backslash in a string to be followed by another character and be used for some kind of special syntax, so in order to just add a backslash to your string, you’ll need to use the special syntax backslash backslash ( `\\` ).
+ バックスラッシュとダブルクオーテーションの組み合わせ( `\"` )はStringのなかでは単なるダブルクオーテーション( `"` )として認識されます。Swiftではバックスラッシュの後には必ず文字が続く特別な構文として認識されるため、バックスラッシュをバックスラッシュとして入力したい時には2つ重ねます。( `\\` )
 
- ### Double quotes are important!
+ ### ダブルクオーテーションは重要！
 
- As a last note, remember that Strings are not variables and variables are not Strings, so writing:
+ 最後に、Stringと変数は別物ということを忘れずに！ Dangerと "Danger"は全く別物です。
 
     Danger
 
@@ -104,9 +105,9 @@ var signText: String = "This is not a sign."
 
     "Danger"
 
- - important: Variables can store data of type `String`, like the variable `signText` does. But they cannot change data types once created -- `signText` can only store `String` types, not `Int` types.
+ - 重要：`signText`で見たように、変数は最初の設定次第で`String`のデータも保管できますが、保管するデータの種類を途中で変えることはできません。(例：`signText`は`String`のデータは保管できるが、’Int’のデータは保管できない。)
 
- Let’s go on to the next challenge!
+ 次のチャレンジにいってみよう！
 
 */
 //: [Previous](@previous) | [Next](@next)
